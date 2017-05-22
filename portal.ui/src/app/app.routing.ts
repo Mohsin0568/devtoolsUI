@@ -20,13 +20,12 @@ const appRoutes: Routes = [
     { path: 'checker', component: CheckerComponent },
     { path: 'converters', component: ConvertersComponent},
     { path: 'dateTools', component: DateToolsComponent},
-    { path: 'dictionary', component: DictionaryComponent }
+    { path: 'dictionary', component: DictionaryComponent },
     { path: 'bankUtils', component: BankValidatorComponent },
     { path: 'fileformat', component: FileFormatComponent },
     { path: 'filediff', component: FileDiffComponent},
     { path: 'abbrevations', component: AbbrevationComonent },
-    { path: 'country', component: CountryComponent }
-    { path: 'filediff', component: FileDiffComponent },
+    { path: 'country', component: CountryComponent },
     { path: 'timer', component: TimerComponent },
     { path: 'apiDocument', component: ApiDocumentationComponent }
 ];
