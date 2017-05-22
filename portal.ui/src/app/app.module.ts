@@ -21,6 +21,9 @@ import { AbbrevationComonent } from './components/abbrevation.component';
 import { CountryComponent } from './components/country.component';
 import { ApiDocumentationComponent } from './components/api-documentation.component';
 import { TimerComponent } from './components/timer.component';
+import { NewsComponent } from './components/news.component';
+import { ZipComponent } from './components/zip.component';
+import { ObjNgFor } from './components/zip.component';
 import { FileInput } from './components/common/FileInput';
 import { Clock } from './components/common/Clock';
 import { routing }        from './app.routing';
@@ -29,6 +32,8 @@ import { routing }        from './app.routing';
 // Services
 import { UuidService } from './services/uuid.service';
 import { GlobalSharedService } from './services/global-shared.service';
+import { NewsService } from './services/news.service';
+import { ZipService } from './services/zip.service';
 import { CheckerService } from './services/checker.service';
 import { ConvertersService } from './services/converters.service';
 import { DateToolsService } from './services/date-tools.service';
@@ -60,7 +65,7 @@ import {
     RatingModule,
     AutoCompleteModule,
     TabViewModule,
-    DragDropModule,    
+    DragDropModule,
     ConfirmDialogModule,
     ConfirmationService,
     ChartModule,
@@ -99,7 +104,7 @@ import {
         RatingModule,
         AutoCompleteModule,
         TabViewModule,
-        DragDropModule,    
+        DragDropModule,
         ConfirmDialogModule,
         ChartModule,
         FileUploadModule,
@@ -111,7 +116,7 @@ import {
         FieldsetModule
     ],
     declarations: [
-        CheckerComponent, 
+        CheckerComponent,
         ConvertersComponent, DateToolsComponent, DictionaryComponent,
         AppComponent,
         HomeComponent,
@@ -123,13 +128,17 @@ import {
         CountryComponent,
         ApiDocumentationComponent,
         TimerComponent,
+        NewsComponent,
+        ZipComponent,
+        ObjNgFor,
         FileInput,
         Clock
-      
+
     ],
-    providers: [       
-        BaseRequestOptions, UuidService, GlobalSharedService, CheckerService, ConvertersService,
-        DateToolsService, DictionaryService, AbbrevationService, CountryService, ApiDocumentationService
+    providers: [
+        BaseRequestOptions, UuidService, GlobalSharedService, NewsService, ZipService,
+        CheckerService, ConvertersService, DateToolsService, DictionaryService, AbbrevationService,
+        CountryService, ApiDocumentationService
     ],
     bootstrap: [AppComponent],
     directives: [ROUTER_DIRECTIVES]

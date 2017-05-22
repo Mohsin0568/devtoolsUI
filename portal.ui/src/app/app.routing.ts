@@ -12,6 +12,8 @@ import { FileFormatComponent } from './components/fileformat.component';
 import { AbbrevationComonent } from './components/abbrevation.component';
 import { CountryComponent } from './components/country.component';
 import { TimerComponent } from './components/timer.component';
+import { NewsComponent } from './components/news.component';
+import { ZipComponent } from './components/zip.component';
 import { ApiDocumentationComponent } from './components/api-documentation.component';
 
 const appRoutes: Routes = [
@@ -27,6 +29,8 @@ const appRoutes: Routes = [
     { path: 'abbrevations', component: AbbrevationComonent },
     { path: 'country', component: CountryComponent },
     { path: 'timer', component: TimerComponent },
+    { path: 'news', component: NewsComponent },
+    { path: 'zip', component: ZipComponent },
     { path: 'apiDocument', component: ApiDocumentationComponent }
 ];
 
