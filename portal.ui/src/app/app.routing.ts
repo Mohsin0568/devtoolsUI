@@ -15,6 +15,8 @@ import { HolyQuranComponent } from './components/holy-quran.component';
 import { ContributorsComponent } from './components/contributors.component';
 import { CountryComponent } from './components/country.component';
 import { TimerComponent } from './components/timer.component';
+import { NewsComponent } from './components/news.component';
+import { ZipComponent } from './components/zip.component';
 import { ApiDocumentationComponent } from './components/api-documentation.component';
 import { QRCodeGeneratorComponent } from './components/qr-code-generator.component';
 
@@ -24,14 +26,15 @@ const appRoutes: Routes = [
     { path: 'checker', component: CheckerComponent },
     { path: 'converters', component: ConvertersComponent},
     { path: 'dateTools', component: DateToolsComponent},
-    { path: 'dictionary', component: DictionaryComponent }
+    { path: 'dictionary', component: DictionaryComponent },
     { path: 'bankUtils', component: BankValidatorComponent },
     { path: 'fileformat', component: FileFormatComponent },
     { path: 'filediff', component: FileDiffComponent},
     { path: 'abbrevations', component: AbbrevationComponent },
-    { path: 'country', component: CountryComponent }
-    { path: 'filediff', component: FileDiffComponent },
+    { path: 'country', component: CountryComponent },
     { path: 'timer', component: TimerComponent },
+    { path: 'news', component: NewsComponent },
+    { path: 'zip', component: ZipComponent },
     { path: 'apiDocument', component: ApiDocumentationComponent },
     { path: 'bible', component: BibleComponent },
     { path: 'holyQuran', component: HolyQuranComponent },

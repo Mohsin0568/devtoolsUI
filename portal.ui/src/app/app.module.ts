@@ -25,6 +25,9 @@ import { HolyQuranComponent } from './components/holy-quran.component';
 import { ContributorsComponent } from './components/contributors.component';
 import { QRCodeGeneratorComponent } from './components/qr-code-generator.component';
 import { TimerComponent } from './components/timer.component';
+import { NewsComponent } from './components/news.component';
+import { ZipComponent } from './components/zip.component';
+import { ObjNgFor } from './components/zip.component';
 import { FileInput } from './components/common/FileInput';
 import { Clock } from './components/common/Clock';
 import { routing } from './app.routing';
@@ -32,6 +35,8 @@ import { routing } from './app.routing';
 
 // Services
 import { UuidService } from './services/uuid.service';
+import { NewsService } from './services/news.service';
+import { ZipService } from './services/zip.service';
 import { CheckerService } from './services/checker.service';
 import { ConvertersService } from './services/converters.service';
 import { DateToolsService } from './services/date-tools.service';
@@ -142,6 +147,9 @@ import {
         ContributorsComponent,
         QRCodeGeneratorComponent,
         TimerComponent,
+        NewsComponent,
+        ZipComponent,
+        ObjNgFor,
         FileInput,
         Clock,
         SpinnerComponent
@@ -150,7 +158,8 @@ import {
     providers: [       
         BaseRequestOptions, UuidService, GlobalSharedService, CheckerService, ConvertersService,
         DateToolsService, DictionaryService, AbbrevationService, CountryService, ApiDocumentationService, BibleService, HolyQuranService,
-        SpinnerService, QRCodeGeneratorService
+        SpinnerService, QRCodeGeneratorService, NewsService, ZipService
+        
     ],
     bootstrap: [AppComponent],
     directives: [ROUTER_DIRECTIVES]
