@@ -17,18 +17,21 @@ import { DateToolsComponent } from './components/date-tools.component';
 import { DictionaryComponent } from './components/dictionary.component';
 import { FileDiffComponent } from './components/fileDiff.component';
 import { FileFormatComponent } from './components/fileformat.component';
-import { AbbrevationComonent } from './components/abbrevation.component';
+import { AbbrevationComponent } from './components/abbrevation.component';
 import { CountryComponent } from './components/country.component';
 import { ApiDocumentationComponent } from './components/api-documentation.component';
+import { BibleComponent } from './components/bible.component';
+import { HolyQuranComponent } from './components/holy-quran.component';
+import { ContributorsComponent } from './components/contributors.component';
+import { QRCodeGeneratorComponent } from './components/qr-code-generator.component';
 import { TimerComponent } from './components/timer.component';
 import { FileInput } from './components/common/FileInput';
 import { Clock } from './components/common/Clock';
-import { routing }        from './app.routing';
+import { routing } from './app.routing';
 
 
 // Services
 import { UuidService } from './services/uuid.service';
-import { GlobalSharedService } from './services/global-shared.service';
 import { CheckerService } from './services/checker.service';
 import { ConvertersService } from './services/converters.service';
 import { DateToolsService } from './services/date-tools.service';
@@ -36,6 +39,16 @@ import { DictionaryService } from './services/dictionary.service';
 import { AbbrevationService } from './services/abbrevation.service';
 import { CountryService } from './services/country.service';
 import { ApiDocumentationService } from './services/api-documentation.service';
+import { BibleService } from './services/bible.service';
+import { HolyQuranService } from './services/holy-quran.service';
+import { QRCodeGeneratorService } from './services/qr-code-generator.service';
+
+/*---------------------------------Utilities---------------------------------------*/
+import { GlobalSharedService }    from './services/global-shared.service';
+import { SpinnerService } from './services/SpinnerService';
+import { SpinnerComponent } from './components/SpinnerComponent';
+/*---------------------------------Utilities---------------------------------------*/
+
 
 // ng module import
 import {
@@ -70,7 +83,8 @@ import {
     ProgressBarModule,
     TreeModule,
     TreeNode,
-    FieldsetModule
+    FieldsetModule,
+    SelectButtonModule
 } from 'primeng/primeng';
 
 @NgModule({
@@ -108,7 +122,8 @@ import {
         ProgressBarModule,
         routing,
         TreeModule,
-        FieldsetModule
+        FieldsetModule,
+        SelectButtonModule
     ],
     declarations: [
         CheckerComponent, 
@@ -119,17 +134,23 @@ import {
         BankValidatorComponent,
         FileDiffComponent,
         FileFormatComponent,
-        AbbrevationComonent,
+        AbbrevationComponent,
         CountryComponent,
         ApiDocumentationComponent,
+        BibleComponent,
+        HolyQuranComponent,
+        ContributorsComponent,
+        QRCodeGeneratorComponent,
         TimerComponent,
         FileInput,
-        Clock
+        Clock,
+        SpinnerComponent
       
     ],
     providers: [       
         BaseRequestOptions, UuidService, GlobalSharedService, CheckerService, ConvertersService,
-        DateToolsService, DictionaryService, AbbrevationService, CountryService, ApiDocumentationService
+        DateToolsService, DictionaryService, AbbrevationService, CountryService, ApiDocumentationService, BibleService, HolyQuranService,
+        SpinnerService, QRCodeGeneratorService
     ],
     bootstrap: [AppComponent],
     directives: [ROUTER_DIRECTIVES]

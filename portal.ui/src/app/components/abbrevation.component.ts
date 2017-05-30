@@ -7,7 +7,7 @@ import { AbbrevationService } from './../services/abbrevation.service';
     selector: 'abbrevation'
 })
 
-export class AbbrevationComonent implements OnInit{
+export class AbbrevationComponent implements OnInit{
         
     word : string ;
     abbrevationType: string ;

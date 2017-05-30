@@ -34,14 +34,18 @@
 	            </ul>
 	            
 	         </li>
+	         <li><a [routerLink]="['contributors']">Contributors</a></li>
 				
 	      </ul>
 	   </div>
    
 	</nav>
-	<div id="page-wrapper">
-		<br/>
-		<router-outlet></router-outlet>
+	<div id="page-wrapper" class="absolute">
+		<div class="row">
+			<br/>									
+			<router-outlet>											
+			</router-outlet>
+		</div>
 	</div>
 	
 </div>

@@ -1,0 +1,42 @@
+<div align="center">
+	<p-radioButton name="type" value="Old Testment" [(ngModel)]="bibleType" label="Old Testment" (onClick)="getBooks($event)"> </p-radioButton>
+	&nbsp; &nbsp; <p-radioButton name="type" value="New Testment" [(ngModel)]="bibleType" label="New Testment" (onClick)="getBooks($event)"></p-radioButton>	
+</div>
+
+<br/> <br/>
+
+<div class="col-lg-12">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            {{bibleType}}
+        </div>
+        <div class="panel-body">
+           <ul *ngFor="let book of books" class="myList">
+           		<button type="button" class="btn btn-link" (click)="getChapters(book,1)">{{book}}</button>           	
+           </ul>
+        </div>        
+    </div>
+</div>
+
+<br/> <br/>
+
+<div class="col-lg-12">
+	<div class="panel panel-default">
+	    <div class="panel-heading">
+	        {{bookName}} -- Chapter {{chapter}}
+	    </div>
+	    <!-- .panel-heading -->
+    	<div class="panel-body">
+    		{{description}}
+    	</div>
+    	<div class="panel-footer">
+             <div align="right">          		
+             	<button type="button" class="btn btn-link" (click)="getPreviousChapter()">Previous</button>             			     	            	
+             	<input id="place" [(ngModel)]="chapterNum" ng-disabled="bookName==''" (keyup.enter)="getChapterByNumber()">
+             	<button type="button" class="btn btn-link" (click)="getNextChapter()">Next</button>
+             </div>
+         </div>
+    </div>
+</div>
+    	
+                
